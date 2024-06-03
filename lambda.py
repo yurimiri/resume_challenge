@@ -37,12 +37,14 @@ def handle_visit():
         ReturnValues="UPDATED_NEW",
     )
     visits = response["Attributes"]["visits"]
+    print(f"visits type is ${type(visits)}")
     return {"statusCode": 200, "body": json.dumps({"visits": visits})}
 
 
 def handle_likes():
     response = table.get_item(Key={"id": "like_count"})
     likes = response.get("Item", {}).get("likes", 0)
+    print(f"likes type is ${type(likes)}")
     return {"statusCode": 200, "body": json.dumps({"likes": likes})}
 
 
