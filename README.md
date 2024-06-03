@@ -6,7 +6,7 @@
 
 - 자신의 레포지토리로 `fork` 후 진행
 
-## mission 1 : S3 구성 → html 배포
+## mission 1 : S3 구성 → html 배포
 
 - `resume.html` 활용
 - S3 정적 웹페이지 호스팅 기능으로 배포
@@ -15,12 +15,12 @@
 
 - `Resume 폴더` 활용
 
-## mission 3 :  Lambda 함수 구성
+## mission 3 : Lambda 함수 구성
 
 - `lambda.py` 활용
 - DynamoDB로 방문, 좋아요 정보를 전달
 
-## mission 4 : S3 → Lambda
+## mission 4 : S3 → Lambda
 
 - 정해진 `Path, Method`로 요청이 전달되는지 확인
 
