@@ -53,16 +53,16 @@ const App = () => {
   const [likeCount, setLikeCount] = useState(0);
 
   useEffect(() => {
-    // Fetch visit count and increment it
-    fetch(`${LAMBDA_URL}/visit`)
+    // 방문 카운트 GET
+    fetch(`${LAMBDA_URL}/FILL_ME_CORRECT_PATH`)
       .then(response => response.json())
       .then(data => {
         console.log(`!!!!!!!!!!!!!!! ${data}`)
         setVisitCount(data.visits)
       });
 
-    // Fetch like count
-    fetch(`${LAMBDA_URL}/likes`)
+    // 좋아요 카운트 GET
+    fetch(`${LAMBDA_URL}/FILL_ME_CORRECT_PATH`)
       .then(response => response.json())
       .then(data => 
         {
@@ -72,7 +72,8 @@ const App = () => {
   }, []);
 
   const handleLike = () => {
-    fetch(`${LAMBDA_URL}/like`, { method: 'POST' })
+    // 좋아요 카운트 POST
+    fetch(`${LAMBDA_URL}/FILL_ME_CORRECT_PATH`, { method: 'POST' })
       .then(response => response.json())
       .then(data => setLikeCount(data.likes));
   };
