@@ -2,8 +2,8 @@ import json
 import boto3
 from boto3.dynamodb.conditions import Key
 
-dynamodb = boto3.resource("dynamodb")
 table_name = "YourDynamoDBTableName"
+dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table(table_name)
 
 
@@ -14,7 +14,9 @@ def lambda_handler(event, context):
     method = event["requestContext"]["http"]["method"]
     print(method)
     print("##########")
-    if path == "/visit" and method == "GET":
+    if path == "/" and method == "GET":
+        return {"statusCode": 200, "body": json.dumps({"message": "람다 작동 확인!"})}
+    elif path == "/visit" and method == "GET":
         print("방문!")
         return handle_visit()
     elif path == "/likes" and method == "GET":
